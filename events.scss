@@ -1,0 +1,300 @@
+@import "./styles/bootstrap/bootstrap.scss";
+
+header {
+    .main {
+        // background-color: green;
+        color: #A557F2 !important;
+    }
+    .heading {
+        // background-color: rgba(0, 0, 0,0.1);
+        margin-top: 30px;
+        max-width: 480px;
+        height: 55px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 55px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.015em;
+        color: #FFFFFF;
+    }
+    .navigation {
+        position: absolute;
+        right: 8%;
+        top: 47%;
+        img {
+            width: 41.79px;
+            height: 81.12px;
+        }
+    }
+    .navigation2 {
+        position: absolute;
+        left: 1.5%;
+        top: 47%;
+        img {
+            width: 41.79px;
+            height: 81.12px;
+        }
+    }
+    .events {
+        // background-color: rgba(0, 0, 0,0.1);
+        height: 70%;
+        width: 80%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        .box {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            .event {
+                height: 80%;
+                width: 45%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .event-details {
+                    img {
+                        max-height:50%;
+                        width: 120px;
+                        margin-right: 15px;
+                    }
+                }
+                span {
+                    align-self: flex-end;
+                    width: 393.38px;
+                    height: 92.98px;
+                    font-family: "Montserrat";
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 20px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: -0.015em;
+                    color: #FFFFFF;
+                }
+                .btn {
+                    margin-top: 2px;
+                    margin-bottom: 20px;
+                    width: 120px;
+                    height: 30px;
+                    background: linear-gradient(180deg, #593F73 30.47%, rgba(89, 63, 115, 0.380469) 86%, rgba(76, 55, 98, 0.35) 86.01%);
+                    border-radius: 8px;
+                    color: #FFFFFF;
+                    font-family: "Montserrat";
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .help {
+        // background-color: rgba(0, 0, 0,0.1);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .help-content {
+            // background-color: red;
+            height: 70%;
+            width: 48%;
+            // line-height: 21px;
+            h2 {
+                margin-top: 35px;
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: normal;
+                font-size: 30px;
+                // line-height: 72px;
+                letter-spacing: -0.015em;
+                color: #FFFFFF;
+                // background-color: green;
+            }
+            p {
+                max-width: 255.97px;
+                // height: 364.71px;
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                letter-spacing: -0.015em;
+                color: rgb(255, 255, 255);
+                // background-color: green;
+            }
+        }
+    }
+    .ticket {
+        margin-top: 70px;
+        height: 70%;
+        max-width: 70%;
+        justify-content: space-around;
+        display: flex;
+        // background-color: rgba(0, 0, 0,0.1);
+        align-items: center;
+        .ticket-img {
+            height: 80%;
+            // width: 50%;
+            img {
+                margin-right: 10px;
+                margin-left: 10px;
+                width: 230px;
+                height: 100%;
+            }
+        }
+        .ticket-details {
+            // background-color: green;
+            height: 70%;
+            .btn {
+                margin-top: 30px;
+                margin-bottom: 20px;
+                width: 120px;
+                height: 30px;
+                background: linear-gradient(180deg, #593F73 30.47%, rgba(89, 63, 115, 0.380469) 86%, rgba(76, 55, 98, 0.35) 86.01%);
+                border-radius: 8px;
+                color: #FFFFFF;
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 20px;
+                text-align: center;
+            }
+            span {
+                // background-color: red;
+                width: 500.67px;
+                height: 100.48px;
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 20px;
+                display: flex;
+                align-items: center;
+                letter-spacing: -0.015em;
+                color: #FFFFFF;
+            }
+
+            .quantity {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                width: 200px;
+                margin-bottom: 20px;
+                label {
+                    width: 159px;
+                    height: 30px;
+                    font-family: "Montserrat";
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                    line-height: 36px;
+                    letter-spacing: -0.015em;
+                    color: #FFFFFF;
+                }
+                select {
+                    width: 60px;
+                }
+            }
+            .grade {
+                display: flex;
+                justify-content: space-between;
+                width: 220px;
+                // background-color: red;
+                label {
+                    width: 70px;
+                    height: 20px;
+                    font-family: "Montserrat";
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                    line-height: 20px;
+                    letter-spacing: -0.015em;
+                    color: #FFFFFF;
+                }
+                .type {
+                    .options {
+                        // background-color: green;
+                        label {
+                            // background-color: yellow;
+                            width: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    header {
+        .heading {
+            // background-color: red;
+            margin-left: 8%;
+            margin-top: 15px;
+        }
+        .navigation {
+            img {
+                width: 51.79px;
+                height: 101.12px;
+            }
+        }
+        .help {
+            h2 {
+                font-size: 36px;
+            }
+            p {
+                width: 363px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+// * The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

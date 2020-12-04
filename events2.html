@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKETTY</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="animate-in">
+    <header> 
+        <div class="overlay">
+            <nav class="container-fluid">
+                <div class="navbar navbar-expand-lg">
+                    <a href="index.html" class="navbar-brand"><img src="./assets/imgs/logo1.svg" alt=""></a>
+                    <button class="btn d-md-none" id="navBtn"><i class="fas fa-bars"></i></button>
+                    <div class="navbar-items d-none d-md-flex" id="navItems">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="events.html" class="nav-link main">EVENTS</a></li>
+                            <li class="nav-item"><a href="help.html" class="nav-link">HELP</a></li>
+                            <li class="nav-item"><a href="event.html" class="nav-link">CREATE EVENT</a></li>
+                            <li class="nav-item"><a href="login.html" class="nav-link">LOGIN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h1 class="heading container">UPCOMING EVENTS</h1>
+            <a href="events.html">
+                <button class="btn navigation2"><img src="./assets/vectors/Vector 2.png" alt=""></button>
+            </a>
+            <div class="events container-fluid">
+                <div class="box container">
+                    <div id="event1" class="event d-block">
+                        <div class="event-details d-flex">
+                            <img src="./assets/imgs/pic1.png" alt="">
+                            <span class="d-none d-lg-flex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus modi vel facere doloribus nostrum delectus voluptates quod mollitia praesentium architecto.</span>
+                        </div>
+                        <button class="btn">BUY TICKET</button>
+                    </div>
+                    <div id="event2" class="event d-block">
+                        <div class="event-details d-flex">
+                            <img src="./assets/imgs/pic2.png" alt="">
+                            <span class="d-none d-lg-flex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus modi vel facere doloribus nostrum delectus voluptates quod mollitia praesentium architecto.</span>
+                        </div>
+                        <button class="btn">BUY TICKET</button>
+                    </div>
+                </div>
+                <div class="box container">
+                    <div id="event3" class="event d-block">
+                        <div class="event-details d-flex">
+                            <img src="./assets/imgs/pic3.png" alt="">
+                            <span class="d-none d-lg-flex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus modi vel facere doloribus nostrum delectus voluptates quod mollitia praesentium architecto.</span>
+                        </div>
+                        <button class="btn">BUY TICKET</button>
+                    </div>
+                    <div id="event4" class="event d-block">
+                        <div class="event-details d-flex">
+                            <img src="./assets/imgs/pic4.png" alt="">
+                            <span class="d-none d-lg-flex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus modi vel facere doloribus nostrum delectus voluptates quod mollitia praesentium architecto.</span>
+                        </div>
+                        <button class="btn">BUY TICKET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <script>
+        const navBtn = document.getElementById("navBtn");
+        const navItems = document.getElementById("navItems");
+
+        navBtn.addEventListener("click", ()=> {
+            navItems.classList.toggle("d-none");
+        })
+
+        window.addEventListener("beforeunload", ()=> {
+            document.body.classList.add("animate-out")
+        })
+
+
+    </script>
+</body>
+</html>

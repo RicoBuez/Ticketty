@@ -1,0 +1,199 @@
+@import "../scss/bootstrap.scss";
+
+
+$sm:568px;
+$md:768px;
+$pup:rgb(127, 41, 177);
+$bg-color: rgb(255, 253, 253);
+$bg-dark:rgb(0, 0, 0);
+$pupple:linear-gradient(180deg, #593F73 30.47%, rgba(89, 63, 115, 0.380469) 86%, rgba(76, 55, 98, 0.35) 86.01%);
+
+body{
+    font-family: "Montserrat";
+    padding: 0px;
+    margin: 0px;
+    color:$bg-color;
+    background: #e5e5e5;
+}
+#Event-details {
+    background-image: url('/img/josh-sorenson-H9pgj5zIFug-unsplash.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    // width: 1440px;
+    height: 100%;
+    .contact-overlay{
+        height: inherit;
+        background-color: $bg-dark;
+        opacity: 0.8;
+    }
+    h6{
+        font-style: normal;
+        font-size: 35px;
+    }
+    nav{
+        .nav-item {
+            ul {
+                li {
+                    a {
+                        height: 29.01px;
+                        font-family: "Montserrat";
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 17px;
+                        line-height: 21px;
+                        letter-spacing: 0.015em;
+                        color: #FFFFFF;
+                        text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.7);
+                    }
+                }
+            }
+        }
+        justify-content: space-between;
+        .circle{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            border-radius:100% ;
+            width: 25px;
+            height: 25px;
+            background-color:transparent;
+        }
+    }
+.nav-link{
+    font-weight: bold;
+}
+
+
+    .create{
+        color: $pup;
+    }
+    form{
+        justify-content: center;
+    
+        label{
+            margin: 5px 0px;
+            font-size: xx-small;
+        }
+        .form-group{
+            justify-content: space-around;
+        }
+        .form-control{
+            border-radius: 0px !important;
+            border-color: $pup !important;
+        }
+    }
+    .btn-rap{
+        display: flex;
+        justify-content: center;
+        .btn-1{
+            width: 200px;
+            height: 40.11px;
+            border-width: 0px;
+            border-radius: 7px;
+            background: linear-gradient(180deg, #593F73 30.47%, rgba(89, 63, 115, 0.380469) 86%, rgba(76, 55, 98, 0.35) 86.01%);
+            z-index: 1;
+        }
+    }
+}
+
+//media Query section
+
+@media screen and (min-width:992px){
+    
+    #Event-details{
+        height: 900px;
+        width: 1440px;
+        .event-rap{
+            .left-form{
+               max-width: 35%;
+               margin-left: 40px;
+            }
+            .right-form{
+               max-width: 35%;
+               margin-right: 40px;
+            }
+        }
+    }
+    &#login-details{
+        height: 900px;
+        width: 1440px;
+        .login-rap{
+        
+            position: relative;
+            top: 50px;
+            left: 150px;
+            .left-form{
+               max-width: 35%;
+               margin-right: 50px;
+            }
+            .right-form{
+               max-width: 35%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$sm){
+    #Event-details{
+        height: inherit;
+        width: inherit;
+    }
+    &#login-details{
+        height: inherit;
+        width: inherit;
+        .right-form{
+            margin-top: 20px;
+        }
+    }
+}
+@media screen and (min-width:$md){
+    #Event-details{
+        height: 900px;
+        width: inherit;
+    }
+    &#login-details{
+        height: 900px;
+        width: inherit;
+    }
+}
+// login details styles begin
+
+
+
+#login-details{
+    background-image: url('/img/josh-sorenson-H9pgj5zIFug-unsplash.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:900px;
+    .contact-overlay{
+        height: inherit;
+        background-color: $bg-dark;
+        opacity: 0.8;
+    }
+    h6{
+        font-weight: lighter;
+        font-style: normal;
+        font-size: 35px;
+    }
+    
+    .form-control{
+        border-radius: 0px;
+    }
+    .headings{
+        font-size: 20px;
+    }
+    .btn-wrapper{
+        background-color:transparent;
+        .btn-1{
+            border-style: none;
+            border-radius: 10px;
+            width: 100px;
+            background: linear-gradient(180deg, #593F73 30.47%, rgba(89, 63, 115, 0.380469) 86%, rgba(76, 55, 98, 0.35) 86.01%);
+        }
+    }
+}
+.login-body {
+    font-family: "Montserrat" !important;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKETTY</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="animate-in">
+    <header> 
+        <div class="overlay">
+            <nav class="container-fluid">
+                <div class="navbar navbar-expand-lg">
+                    <a href="index.html" class="navbar-brand"><img src="./assets/imgs/logo1.svg" alt=""></a>
+                    <button class="btn d-md-none" id="navBtn"><i class="fas fa-bars"></i></button>
+                    <div class="navbar-items d-none d-md-flex" id="navItems">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="events.html" class="nav-link">EVENTS</a></li>
+                            <li class="nav-item"><a href="help.html" class="nav-link">HELP</a></li>
+                            <li class="nav-item"><a href="events.html" class="nav-link">CREATE EVENT</a></li>
+                            <li class="nav-item"><a href="login.html" class="nav-link">LOGIN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="profile container-fluid">
+                <div class="profile-images row">
+                    <button onclick="goLeft()" class="btn btn1 arrow" id="btnLeft"><i class="fas fa-angle-left fa-2x"></i></button>
+                    <div class="profile-image img1" id="image1"></div>
+                    <div class="profile-image img2" id="image2"></div>
+                    <div class="profile-image img3" id="image3"></div>
+                    <button onclick="goRight()" class="btn btn2 arrow" id="btnRight"><i class="fas fa-angle-right fa-2x"></i></button>
+                </div>
+                <div><a href="buyTicket.html"><button class="btn">BUY TICKET</button></a></div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <script>
+
+        const navBtn = document.getElementById("navBtn");
+        const navItems = document.getElementById("navItems");
+
+        navBtn.addEventListener("click", ()=> {
+            navItems.classList.toggle("d-none");
+        })
+
+
+        const img1 = document.createElement("img");
+        const img2 = document.createElement("img");
+        const img3 = document.createElement("img");
+
+
+        img1.id = "img1";
+        img2.id = "img2";
+        img3.id = "img3";
+        
+        let src1 = document.getElementById("image1");
+        src1.appendChild(img1);
+        let src2 = document.getElementById("image2");
+        src2.appendChild(img2);
+        let src3 = document.getElementById("image3");
+        src3.appendChild(img3);
+
+        let box1 = document.getElementById("img1");
+        box1.src = "./assets/imgs/pic1.png";
+        let box2 = document.getElementById("img2");
+        box2.src = "./assets/imgs/pic2.png";
+        let box3 = document.getElementById("img3");
+        box3.src = "./assets/imgs/pic3.png";
+        
+        const btnLeft = document.querySelector("#btnLeft");
+        const btnRight = document.querySelector("#btnRight");
+
+        btnLeft.addEventListener("click", ()=> {
+            let box1 = document.getElementById("img1");
+            box1.src = "./assets/imgs/pic2.png";
+            let box2 = document.getElementById("img2");
+            box2.src = "./assets/imgs/pic3.png"
+            let box3 = document.getElementById("img3");
+            box3.src = "./assets/imgs/pic1.png";
+        })
+        btnRight.addEventListener("click", ()=> {
+            let box3 = document.getElementById("img3");
+            box3.src = "./assets/imgs/pic2.png";
+            let box2 = document.getElementById("img2");
+            box2.src = "./assets/imgs/pic1.png";
+            let box1 = document.getElementById("img1");
+            box1.src = "./assets/imgs/pic3.png";
+
+        })
+
+        window.addEventListener("beforeunload", ()=> {
+            document.body.classList.add("animate-out")
+        })
+
+    </script>
+</body>
+</html>

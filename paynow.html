@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKETTY</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="animate-in">
+    <header>
+        <div class="overlay">
+            <nav class="container-fluid">
+                <div class="navbar navbar-expand-lg">
+                    <a href="index.html" class="navbar-brand"><img src="./assets/imgs/logo1.svg" alt=""></a>
+                    <button class="btn d-md-none" id="navBtn"><i class="fas fa-bars"></i></button>
+                    <div class="navbar-items d-none d-md-flex" id="navItems">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="events.html" class="nav-link">EVENTS</a></li>
+                            <li class="nav-item"><a href="help.html" class="nav-link">HELP</a></li>
+                            <li class="nav-item"><a href="event.html" class="nav-link">CREATE EVENT</a></li>
+                            <li class="nav-item"><a href="login.html" class="nav-link">LOGIN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container ticket">
+                <div class="ticket-img"><img src="./assets/imgs/pic2.png" alt=""></div>
+                <div class="ticket-details">
+                    <span class="d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non
+                        tincidunt velit. Quisque eget aliquam massa, vitae placerat augue. Duis dictum eu tortor non
+                        pulvinar. Proin sit amet nulla tincidunt, euismod erat sit amet, tincidunt augue. </span>
+                    <div class="quantity">
+                        <label for="">No of Tickets:</label>
+                        <select class="custom-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
+                    </div>
+                    <div class="grade">
+                        <label for="">Ticket Type:</label>
+                        <div class="type">
+                            <div class="options">
+                                <label for="">REGULAR</label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="options">
+                                <label for="">VIP</label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="options">
+                                <label for="">VVIP</label>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                    </div>
+                    <a href=""><button class="btn">PAY NOW</button></a>
+                </div>
+            </div>
+    
+    
+        </div>
+    </header>
+
+
+
+
+    <script>
+
+        const navBtn = document.getElementById("navBtn");
+        const navItems = document.getElementById("navItems");
+
+        navBtn.addEventListener("click", () => {
+            navItems.classList.toggle("d-none");
+        })
+
+
+        const img1 = document.createElement("img");
+        const img2 = document.createElement("img");
+        const img3 = document.createElement("img");
+
+
+        img1.id = "img1";
+        img2.id = "img2";
+        img3.id = "img3";
+
+        let src1 = document.getElementById("image1");
+        src1.appendChild(img1);
+        let src2 = document.getElementById("image2");
+        src2.appendChild(img2);
+        let src3 = document.getElementById("image3");
+        src3.appendChild(img3);
+
+        let box1 = document.getElementById("img1");
+        box1.src = "./assets/imgs/pic1.png";
+        let box2 = document.getElementById("img2");
+        box2.src = "./assets/imgs/pic2.png";
+        let box3 = document.getElementById("img3");
+        box3.src = "./assets/imgs/pic3.png";
+
+        const btnLeft = document.querySelector("#btnLeft");
+        const btnRight = document.querySelector("#btnRight");
+
+        btnLeft.addEventListener("click", () => {
+            let box1 = document.getElementById("img1");
+            box1.src = "./assets/imgs/pic2.png";
+            let box2 = document.getElementById("img2");
+            box2.src = "./assets/imgs/pic3.png"
+            let box3 = document.getElementById("img3");
+            box3.src = "./assets/imgs/pic1.png";
+        })
+        btnRight.addEventListener("click", () => {
+            let box3 = document.getElementById("img3");
+            box3.src = "./assets/imgs/pic2.png";
+            let box2 = document.getElementById("img2");
+            box2.src = "./assets/imgs/pic1.png";
+            let box1 = document.getElementById("img1");
+            box1.src = "./assets/imgs/pic3.png";
+
+        })
+
+        window.addEventListener("beforeunload", () => {
+            document.body.classList.add("animate-out")
+        })
+
+
+
+
+
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

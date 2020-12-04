@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKETTY</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="animate-in">
+    <header> 
+        <div class="overlay">
+            <nav class="container-fluid">
+                <div class="navbar navbar-expand-lg">
+                    <a href="index.html" class="navbar-brand"><img src="./assets/imgs/logo1.svg" alt=""></a>
+                    <button class="btn d-md-none" id="navBtn"><i class="fas fa-bars"></i></button>
+                    <div class="navbar-items d-none d-md-flex" id="navItems">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="events.html" class="nav-link">EVENTS</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link main">HELP</a></li>
+                            <li class="nav-item"><a href="event.html" class="nav-link">CREATE EVENT</a></li>
+                            <li class="nav-item"><a href="login.html" class="nav-link">LOGIN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h1 class="heading container">HOW IT WORKS</h1>
+            <div class="help container">
+                <div class="help-content buyer">
+                    <h2>Buyer</h2>
+                    <p><img src="./assets/vectors/Vector.png">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper nisi ut molestie ultrices. </p>
+                    <p><img src="./assets/vectors/Vector.png">Praesent eu tortor lorem. Duis pharetra, augue eu blandit mattis, libero lectus faucibus risus, id pretium quam eros dictum ante. </p>
+                    <p><img src="./assets/vectors/Vector.png">Vivamus vestibulum arcu vestibulum ligula commodo, sit amet pellentesque libero maximus.</p>
+                    <p><img src="./assets/vectors/Vector.png">Curabitur quis nulla leo. Nunc ultricies iaculis sodales. Sed vehicula tortor vel metus imperdiet facilisis. Sed sed suscipit mi, ut consequat sem.</p>
+    
+                </div>
+                <div class="help-content seller">
+                    <h2>Event Planner</h2>
+                    <p><img src="./assets/vectors/Vector.png"> ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper nisi ut molestie ultrices. </p>
+                    <p><img src="./assets/vectors/Vector.png">Praesent eu tortor lorem. Duis pharetra, augue eu blandit mattis, libero lectus faucibus risus, id pretium quam eros dictum ante. </p>
+                    <p><img src="./assets/vectors/Vector.png">Vivamus vestibulum arcu vestibulum ligula commodo, sit amet pellentesque libero maximus.</p>
+                    <p><img src="./assets/vectors/Vector.png">Curabitur quis nulla leo. Nunc ultricies iaculis sodales. Sed vehicula tortor vel metus imperdiet facilisis. Sed sed suscipit mi, ut consequat sem.</p>
+    
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <script>
+        const navBtn = document.getElementById("navBtn");
+        const navItems = document.getElementById("navItems");
+
+        navBtn.addEventListener("click", ()=> {
+            navItems.classList.toggle("d-none");
+        })
+
+        window.addEventListener("beforeunload", ()=> {
+            document.body.classList.add("animate-out")
+        })
+
+
+    </script>
+</body>
+</html>
